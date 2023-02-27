@@ -15,6 +15,12 @@ credit:{
 debit:{
     type:Number,
 },
+quickSave:[
+    {
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"Quicksave"
+    }
+]
 
 },
 {

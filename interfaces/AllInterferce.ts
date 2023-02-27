@@ -17,6 +17,10 @@ export interface walletData{
     balance:number;
     credit:number;
     debit:number;
+    quickSave:{}[]
+    safeLock:{}[]
+    target:{}[]
+
 }
 
 export interface historyData{
@@ -24,4 +28,23 @@ export interface historyData{
     transactionRefernce:number;
     transactionType:string;
 
+}
+
+export interface Quick{
+    amount: number;
+    autoSave: boolean;
+    dateTime: number| string;
+    interest: number;
+}
+
+export interface Locks{
+    amount:number
+    PayBackTime: string,
+    interest:number,
+    lock: boolean
+}
+
+export interface TargetData{
+    amount:number
+    fixedAmount: number
 }

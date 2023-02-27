@@ -118,3 +118,28 @@ export const MakeTransfer =async (req:Request,res:Response) => {
         })
     }
 }
+
+//fUND WALLET FROM BANK
+export const fundWalletFromBank = async(req:Request,res:Response)=> {
+    try {
+        const getUser = await userModel.findById(req.params.userID)
+        const getWallet = await walletModel.findById(req.params.walletID)
+
+        const {amount, transactionRef} = req.body
+        await walletModel.findByIdAndUpdate
+
+
+
+
+
+        res.status(200).json({
+            message:"wallet has been updated successfully"
+        })
+
+        
+    } catch (error) {
+        return res.status(404).json({
+            message:"Anerror occured", error
+        })
+    }
+}
