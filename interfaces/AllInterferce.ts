@@ -41,10 +41,15 @@ export interface Locks{
     amount:number
     PayBackTime: string,
     interest:number,
-    lock: boolean
+    lock: boolean;
+    title:string;
 }
 
 export interface TargetData{
     amount:number
-    fixedAmount: number
+    fixedAmount: number;
+    interest:number;
+    dataTime:string;
+    title:string;
+    targetValue:boolean;
 }

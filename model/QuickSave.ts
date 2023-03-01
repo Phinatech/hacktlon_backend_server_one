@@ -24,4 +24,4 @@ interest:{
     timestamps:true}
     )
 
-export default mongoose.model<MainData>("wallets",QuickSchema)
+export default mongoose.model<MainData>("quicksaves",QuickSchema)

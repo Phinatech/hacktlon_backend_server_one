@@ -18,13 +18,24 @@ debit:{
 quickSave:[
     {
         type:mongoose.Schema.Types.ObjectId,
-        ref:"Quicksave"
+        ref:"quicksaves",
+    }
+],
+safeLock:[
+    {
+        type: mongoose.Schema.Types.ObjectId,
+        ref:"savelocks",
+    }
+],
+target:[
+    {
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"targets"
     }
 ]
-
 },
 {
-    timestamps:true}
-    )
+    timestamps:true},
+)
 
 export default mongoose.model<MainData>("wallets",walletSchema)
